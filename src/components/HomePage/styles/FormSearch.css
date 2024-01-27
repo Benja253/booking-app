@@ -1,0 +1,25 @@
+.search {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  padding: 2em 0 3em;
+}
+.search__input {
+  padding: 0.5em 1em;
+  font-weight: 500;
+  border: 1px solid #aaaa;
+  height: 3em;
+}
+.search__btn {
+  display: block;
+  font-weight: 500;
+  width: 7em;
+  height: 3em;
+  border: none;
+  background-color: rgb(250, 64, 64);
+  color: white;
+  filter: brightness(0.9);
+}
+.search__btn:hover {
+  filter: brightness(1);
+}

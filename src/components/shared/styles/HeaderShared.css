@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  padding: 1em 2em 1.5em;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: baseline;
+  box-shadow: 0 0 1em #0003;
+  margin-bottom: 1.5em;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+.header__logo {
+  color: rgb(250, 64, 64);
+}
+.header__app {
+  color: #444;
+}
+.header__list {
+  display: flex;
+  gap: 1.5em;
+}
+.header__menu {
+  display: none;
+  
+}
+@media screen and (max-width: 550px) {
+  .header__nav {
+    position: fixed;
+    background-color: white;
+    right: 0;
+    padding: 2.5em 2em 3em;
+    top: 78px;
+    box-shadow: -0.2em 0.2em 0.2em
+    #0002;
+    transition: top 300ms ease;
+  }
+  .nav__close {
+    top: -230px;
+    z-index: -1;
+  }
+  .header__menu {
+    display: block;
+    position: relative;
+    top: 0.2em;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .header__list {
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  
+}

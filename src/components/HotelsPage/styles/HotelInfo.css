@@ -1,0 +1,76 @@
+.hotel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 1em;
+  padding: 1em 2em 2em;
+}
+.hotel__name {
+  grid-column: span 2;
+  text-align: center;
+  margin: 1em 0 1.5em;
+}
+.hotel__name__value {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.3em;
+}
+.slider-container {
+  justify-self: center;
+}
+.hotel__slider {
+  align-self: center;
+}
+.hotel__info {
+  grid-column: span 2;
+}
+.hotel__country {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+.hotel__direction {
+  grid-column: 2 span;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.hotel__direction__value {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.hotel__description {
+  font-weight: 300;
+  padding: 1em 0 1.5em;
+  line-height: 1.4;
+}
+.otherhotel {
+  grid-column: span 2;
+}
+.otherhotel__title {
+  margin-bottom: 1.5em;
+}
+.otherhotel__title__country {
+  color: #fa4040;
+  margin-bottom: 1em;
+}
+.otherhotel__container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+  .hotel {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    column-gap: 0;
+  }
+  .hotel__map {
+    width: 100%;
+    max-width: 500px;
+    grid-row: 3 / 4;
+    margin: 2em 0;
+  }
+}

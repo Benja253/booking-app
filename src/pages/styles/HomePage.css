@@ -1,0 +1,19 @@
+.homepage {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+.homepage__card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+@media screen and (max-width: 550px) {
+  .homepage {
+    grid-template-columns: 1fr;
+  }
+} 

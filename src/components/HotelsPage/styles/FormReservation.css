@@ -1,0 +1,38 @@
+.hotel__reservation {
+  margin-bottom: 2em;
+  grid-column: span 2;
+}
+.hotel__reservation__title {
+  color: #fa4040;
+  margin-bottom: 0.5em;
+}
+.form-reservation__fields {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 200px 200px;
+}
+.form-reservation__field {
+  display: grid;
+  gap: 0.5em;
+}
+.form-reservation__label {
+  padding-left: 1em;
+}
+.form-reservation__input {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.form-reservation__btn {
+  margin-top: 1em;
+  width: 100px;
+  padding: 0.5em 0;
+  font-size: 1rem;
+  background-color: #fa4040cc;
+  color: white;
+  border: none;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em #0004;
+}
+.form-reservation__btn:hover {
+  background-color: #fa4040;
+}

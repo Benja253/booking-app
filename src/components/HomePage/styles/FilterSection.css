@@ -1,0 +1,8 @@
+.filters {
+  grid-row: span 2;
+  padding: 2em 3em;
+}
+.filters__title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
