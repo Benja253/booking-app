@@ -1,0 +1,74 @@
+.reserve {
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr 1fr;
+  width: 100%;
+  max-width: 900px;
+  gap: 1em;
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 0.3em 0.3em 0.5em #0004;
+}
+.reserve__header {
+  border-radius: 1em;
+  overflow: hidden;
+}
+.reserve__img {
+  width: 100%;
+}
+.reserve__info,
+.reserve__days__price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.reserve__name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.reserve__location {
+  font-size: 0.8rem;
+}
+.reserve__comment {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: rgb(53, 53, 255);
+}
+.reserve__comment:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.reserve__days,
+.reserve__subtotal {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+.reserve__days__label,
+.reserve__subtotal__label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.reserve__days__value,
+.reserve__subtotal__value {
+  font-weight: 300;
+  position: relative;
+}
+.reserve__subtotal__value::before {
+  content: 'USD$';
+  font-size: 0.7em;
+  position: absolute;
+  left: -3em;
+  bottom: 0.3em;
+  align-self: end;
+}
+.reserve__delete {
+  font-size: 1.2rem;
+  border: none;
+  width: 2.5em;
+  aspect-ratio: 1;
+  border-radius: 0.6em;
+  background-color: rgb(250, 64, 64,0.6);
+  color: white;
+}
+.reserve__delete:hover {
+  background-color: rgb(250, 64, 64);
+}

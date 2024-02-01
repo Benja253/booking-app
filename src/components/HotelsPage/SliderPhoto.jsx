@@ -6,19 +6,20 @@ const SliderPhoto = ({ hotel }) => {
   const [imgSelected, setImgSelected] = useState(0)
 
   const objStyle = {
-    transform: `translateX(calc(-${imgSelected}/8 * 100%))`
+    transform: `translateX(calc(-${imgSelected}/${hotel?.images.length} * 100%))`,
+    width: `calc(${hotel?.images.length} * 100%)`
   }
 
   const handlePrev = () => {
     if(imgSelected - 1 > 0) {
       setImgSelected(imgSelected - 1)
     } else {
-      setImgSelected(7)
+      setImgSelected(hotel?.images.length)
     }
   }
 
   const handleNext = () => {
-    if(imgSelected + 1 <= 7) {
+    if(imgSelected + 1 <= (hotel?.images.length - 1)) {
       setImgSelected(imgSelected + 1)
     } else {
       setImgSelected(0)
@@ -35,7 +36,7 @@ const SliderPhoto = ({ hotel }) => {
           <div style={objStyle} className="slider__interior">
             {
               hotel?.images.map(imgInfo => (
-                <div key={imgInfo.url} className="slider__img-container">
+                <div key={imgInfo.id} className="slider__img-container">
                   <img className="slider__img" src={imgInfo.url} alt="" />
                 </div>
               ))

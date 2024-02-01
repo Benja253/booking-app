@@ -1,0 +1,40 @@
+.reserveSelected {
+  margin-bottom: 1.5em;
+}
+.reserveSelected__header {
+  display: flex;
+  justify-content: center;
+}
+.reserveSelected__img {
+  width: 200px;
+  border-radius: 0.8em;
+  margin-bottom: 1em;
+}
+.reserveSelected__name {
+  font-size: 1rem;
+  margin-bottom: 0.3em;
+}
+.reserveSelected__location {
+  font-size: 0.8rem;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+.reserveSelected__days__price {
+  font-size: 0.9rem;
+  display: grid;
+  gap: 0.5em;
+  font-weight: 500;
+}
+.reserveSelected__days,
+.reserveSelected__subtotal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.reserveSelected__days__value,
+.reserveSelected__subtotal__value {
+  font-weight: 300;
+}
+.reserveSelected__subtotal__value::before {
+  content: '$';
+  margin-right: 0.3em;
+}

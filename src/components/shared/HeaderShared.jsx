@@ -21,7 +21,7 @@ const HeaderShared = () => {
       <nav className={`header__nav ${navIsClosed && 'nav__close'}`}>
         <ul className="header__list">
           <li className="header__item">
-            <Link to="/">Reservation</Link>
+            <Link to="/reservation">Reservation</Link>
           </li>
           <li className="header__item">
             <Link to="/register">Register</Link>
