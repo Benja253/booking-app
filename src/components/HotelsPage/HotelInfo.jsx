@@ -7,24 +7,25 @@ import './styles/HotelInfo.css'
 import { useEffect} from 'react'
 import useFetch from '../../hooks/useFetch'
 import Hotel from '../HomePage/Hotel'
+import ReviewsHotel from './ReviewsHotel'
+import { Link } from 'react-router-dom'
 
 const HotelInfo = ({ hotel }) => {
 
   const [ otherHotels, getOtherHotels ] = useFetch()
-
+  
   useEffect(() => {
     if(hotel) {
       getOtherHotels(`https://hotels-api.academlo.tech/hotels?cityId=${hotel?.city.id}`)
     }
   }, [hotel])
 
-  console.log(otherHotels)
-
   return (
     <section className='hotel'>
       <header className='hotel__name'>
         <h2 className='hotel__name__value'>{hotel?.name}</h2>
         <StarRating rating={hotel?.rating} />
+        <span>{hotel?.rating}</span>
       </header>
       <SliderPhoto hotel={hotel} />
       <div className='hotel__map'>
@@ -44,15 +45,26 @@ const HotelInfo = ({ hotel }) => {
         </div>
         <p className='hotel__description'>{hotel?.description}</p>
       </section>
-      <section className='hotel__reservation'>
-        <h3 className='hotel__reservation__title'>Reservation</h3>
-        <FormReservation hotel={hotel} />
-      </section>
+      {
+        localStorage.getItem('token')
+          ? (
+            <section className='hotel__reservation'>
+              <h3 className='hotel__reservation__title'>Reservation</h3>
+              <FormReservation hotel={hotel} />
+            </section>
+          )
+          : (
+            <p className='hotel__reservation'>Si deseas hacer reservaciones <Link className='hotel__login' to='/login'>Inicia sesión</Link></p>
+          )
+      }
+      <ReviewsHotel
+        hotel={hotel}
+      />
       <section className='otherhotel'>
         <h3 className='otherhotel__title'>Other Hotels in <span className='otherhotel__title__country'>{hotel?.city.country}</span></h3>
         <div className='otherhotel__container'>
           {
-            otherHotels?.results.filter(hotelOt => hotelOt.id !== hotel.id).map(hotelOt => (
+            otherHotels?.filter(hotelOt => hotelOt.id !== hotel.id).map(hotelOt => (
               <Hotel key={hotelOt.id} hotelInfo={hotelOt} />
             ))
           }

@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import { setUserSlice } from './store/slices/userLogged.slice'
 import { useDispatch, useSelector } from 'react-redux'
 import ReservationPage from './pages/ReservationPage'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 function App() {
 
@@ -28,7 +29,9 @@ function App() {
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/hotels/:id' element={<HotelsPage />} />
-        <Route path='/reservation' element={<ReservationPage />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path='/reservation' element={<ReservationPage />} />
+        </Route>
       </Routes>
     </div>
   )

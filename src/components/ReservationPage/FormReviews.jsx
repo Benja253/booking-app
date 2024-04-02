@@ -20,19 +20,19 @@ const FormReviews = ({ reserveSelected, setReserveSelected }) => {
   }
 
   return (
-    <div className={`reviews ${reserveSelected || 'reviews__close'}`}>
-      <form className="reviews__form" onSubmit={handleSubmit(submit)}>
-        <div onClick={() => setReserveSelected()} className="reviews__x">x</div>
-        <h3 className="reviews__title">Reviews</h3>
+    <div className={`reserve ${reserveSelected || 'reserve__close'}`}>
+      <form className="reserve__form" onSubmit={handleSubmit(submit)}>
+        <div onClick={() => setReserveSelected()} className="reserve__x">x</div>
+        <h3 className="reserve__title">reserve</h3>
         {
           reserveSelected &&
           <ReserveSelected
             reserve={reserveSelected}
           />
         }
-        <label className="reviews__label reviews__label__rating">
-          <span className="reviews__label__name">Rating</span>
-          <select className="reviews__rating" {...register('rating')}>
+        <label className="reserve__label reserve__label__rating">
+          <span className="reserve__label__name">Rating</span>
+          <select className="reserve__rating" {...register('rating')}>
             <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
             <option value="4">⭐️⭐️⭐️⭐️</option>
             <option value="3">⭐️⭐️⭐️</option>
@@ -40,11 +40,11 @@ const FormReviews = ({ reserveSelected, setReserveSelected }) => {
             <option value="1">⭐️</option>
           </select>
         </label>
-        <label className="reviews__label">
-          <span className="reviews__label__name">Comments</span>
-          <textarea className="reviews__value reviews__comment__value" {...register('comment')} />
+        <label className="reserve__label">
+          <span className="reserve__label__name">Comments</span>
+          <textarea className="reserve__value reserve__comment__value" {...register('comment')} />
         </label>
-        <button className="reviews__btn">Submit</button>
+        <button className="reserve__btn">Submit</button>
       </form>
     </div>
   );

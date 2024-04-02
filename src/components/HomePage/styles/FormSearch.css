@@ -23,3 +23,16 @@
 .search__btn:hover {
   filter: brightness(1);
 }
+.homepage__filter__icon {
+  margin-left: 1em;
+  font-size: 1.8rem;
+  cursor: pointer;
+  &:hover {
+    color: rgb(250, 64, 64);
+  }
+}
+@media screen and (min-width: 551px) {
+  .homepage__filter__icon {
+    display: none;
+  }
+}

@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 const useFetch = () => {
   
   const [infoApi, setInfoApi] = useState()
-
+  
   const getApi = (path) => {
     axiosInstance.get(path)
       .then(res => setInfoApi(res.data))
@@ -16,7 +16,6 @@ const useFetch = () => {
   }
 
   return [ infoApi, getApi ]
-
 }
 
 export default useFetch

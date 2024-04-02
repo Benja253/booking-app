@@ -1,8 +1,44 @@
 .filters {
   grid-row: span 2;
   padding: 2em 3em;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 80px;
+  z-index: 1;
+  box-shadow: 0 0 1em #0008;
+  transition: transform 200ms ease;
+}
+.filter__close {
+  transform: translateY(-110%);
+}
+.filters__header {
+  display: flex;
+  justify-content: space-between;
 }
 .filters__title {
   font-size: 1.3rem;
   margin-bottom: 0.5em;
+}
+.filters__exit {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  top: -0.8em;
+  right: -0.8em;
+  &:hover {
+    color: rgb(250, 64, 64);
+  }
+}
+@media screen and (min-width: 551px) {
+  .filters {
+    position: static;
+    box-shadow: none;
+  }
+  .filter__close {
+    transform: translateY(0);
+  }
+  .filters__exit {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-.reviews {
+.reserve {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,21 +12,21 @@
   flex-direction: column;
   backdrop-filter: blur(1.5px);
 }
-.reviews__close {
+.reserve__close {
   transform: scale(0);
 }
-.reviews__form {
+.reserve__form {
   background-color: white;
   padding: 2.3em 2em 3em;
   border-radius: 0.8em;
   position: relative;
 }
-.reviews__title {
+.reserve__title {
   text-align: center;
   margin-bottom: 1em;
   color: rgb(250, 64, 64);
 }
-.reviews__x {
+.reserve__x {
   position: absolute;
   font-size: 1.1rem;
   top: 0.6em;
@@ -34,23 +34,23 @@
   cursor: pointer;
   padding: 0.5em;
 }
-.reviews__x:hover {
+.reserve__x:hover {
   color: rgb(250, 64, 64);
 }
-.reviews__label {
+.reserve__label {
   display: grid;
   gap: 0.5em;
 }
-.reviews__label__rating {
+.reserve__label__rating {
   display: flex;
   gap: 1em;
   margin-bottom: 1em;
 }
-.reviews__rating {
+.reserve__rating {
   padding: 0.3em 0.5em;
   border: 1px solid #ccc;
 }
-.reviews__comment__value {
+.reserve__comment__value {
   resize: none;
   width: 100%;
   height: 100px;
@@ -62,7 +62,7 @@
   outline: none;
   margin-bottom: 1.5em;
 }
-.reviews__btn {
+.reserve__btn {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -73,6 +73,6 @@
   color: white;
   font-weight: 500;
 }
-.reviews__btn:hover {
+.reserve__btn:hover {
   background-color: rgb(250, 64, 64);
 }

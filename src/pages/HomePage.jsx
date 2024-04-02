@@ -9,6 +9,7 @@ import './styles/HomePage.css'
 const HomePage = () => {
 
   const [nameInput, setNameInput] = useState('')
+  const [isOpenForm, setIsOpenForm] = useState(false)
   const [fromTo, setFromTo] = useState({
     from: 0,
     to: Infinity
@@ -34,13 +35,16 @@ const HomePage = () => {
       <FilterSection 
         setFromTo={setFromTo}
         setCountrySelected={setCountrySelected}
+        setIsOpenForm={setIsOpenForm}
+        isOpenForm={isOpenForm}
       />
       <FormSearch
         setNameInput={setNameInput}
+        setIsOpenForm={setIsOpenForm}
       />
       <div className="homepage__card-container">
         {
-          hotels?.results.filter(filterCb).map(hotelInfo => (
+          hotels?.filter(filterCb).map(hotelInfo => (
             <Hotel
               key={hotelInfo.id}
               hotelInfo={hotelInfo}

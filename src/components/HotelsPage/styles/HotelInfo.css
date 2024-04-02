@@ -61,6 +61,13 @@
   justify-content: center;
   align-items: center;
 }
+.hotel__login {
+  color: #fa4040;
+  filter: grayscale(0.4);
+  &:hover {
+    filter: grayscale(0);
+  }
+}
 @media screen and (max-width: 850px) {
   .hotel {
     grid-template-columns: 1fr;

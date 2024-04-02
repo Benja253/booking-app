@@ -13,7 +13,10 @@ const useCrud = () => {
   const getApi = (path) => {
     axiosInstance.get(path, getConfigToken())
       .then(res => setInfoApi(res.data))
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        localStorage.clear()
+      })
   }
 
   const postApi = (path, data) => {
@@ -22,7 +25,10 @@ const useCrud = () => {
         console.log(res.data)
         setInfoApi([...infoApi, res.data])
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        localStorage.clear()
+      })
   }
 
   const deleteApi = (path, id) => {
@@ -31,7 +37,10 @@ const useCrud = () => {
         console.log(res.data)
         setInfoApi(infoApi.filter(e => e.id !== id))
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        localStorage.clear()
+      })
   }
 
   const updateApi = (path, id, data) => {
@@ -40,7 +49,10 @@ const useCrud = () => {
         console.log(res.data)
         setInfoApi(infoApi.map(e => e.id === id ? res.data : e))
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        localStorage.clear()
+      })
   }
 
   return [ infoApi, getApi, postApi, deleteApi, updateApi ]

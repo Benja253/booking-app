@@ -1,0 +1,29 @@
+.user__header {
+  width: 100%;
+  max-width: 150px;
+}
+.user__image {
+  width: 100%;
+}
+.user__welcome {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.user__name {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #FA4040;
+}
+.user__btn {
+  width: 120px;
+  padding: 0.5em;
+  border: 1px solid #FA4040;
+  background-color: white;
+  color: #FA4040;
+  border-radius: 0.8em;
+  &:hover {
+    background-color: #FA4040;
+    color: white;
+    font-weight: 700;
+  }
+}

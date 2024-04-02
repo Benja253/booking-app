@@ -26,8 +26,6 @@ const SliderPhoto = ({ hotel }) => {
     }
   }
 
-  console.log(hotel)
-
   return (
     <div className="slider-container">
       <div className="slider">
