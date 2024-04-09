@@ -16,7 +16,7 @@ const UserLogged = ({ user }) => {
         {
           <img
             className="user__image"
-            src={`/public/images/${user.gender}.png`} 
+            src={`/images/${user.gender}.png`} 
             alt={`${user.gender} male`}
           />
         }

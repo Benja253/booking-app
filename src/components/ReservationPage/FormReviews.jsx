@@ -20,19 +20,19 @@ const FormReviews = ({ reserveSelected, setReserveSelected }) => {
   }
 
   return (
-    <div className={`reserve ${reserveSelected || 'reserve__close'}`}>
+    <div className={`reserve__form-container ${reserveSelected || 'reserve__form__close'}`}>
       <form className="reserve__form" onSubmit={handleSubmit(submit)}>
-        <div onClick={() => setReserveSelected()} className="reserve__x">x</div>
-        <h3 className="reserve__title">reserve</h3>
+        <div onClick={() => setReserveSelected()} className="reserve__form__x">x</div>
+        <h3 className="reserve__form__title">reserve</h3>
         {
           reserveSelected &&
           <ReserveSelected
             reserve={reserveSelected}
           />
         }
-        <label className="reserve__label reserve__label__rating">
-          <span className="reserve__label__name">Rating</span>
-          <select className="reserve__rating" {...register('rating')}>
+        <label className="reserve__form__label reserve__label__rating">
+          <span className="reserve__form__label__name">Rating</span>
+          <select className="reserve__form__rating" {...register('rating')}>
             <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
             <option value="4">⭐️⭐️⭐️⭐️</option>
             <option value="3">⭐️⭐️⭐️</option>
@@ -40,11 +40,11 @@ const FormReviews = ({ reserveSelected, setReserveSelected }) => {
             <option value="1">⭐️</option>
           </select>
         </label>
-        <label className="reserve__label">
-          <span className="reserve__label__name">Comments</span>
-          <textarea className="reserve__value reserve__comment__value" {...register('comment')} />
+        <label className="reserve__form__label">
+          <span className="reserve__form__label__name">Comments</span>
+          <textarea className="reserve__form__value reserve__form__comment__value" {...register('comment')} />
         </label>
-        <button className="reserve__btn">Submit</button>
+        <button className="reserve__form__btn">Submit</button>
       </form>
     </div>
   );

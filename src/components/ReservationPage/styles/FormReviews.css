@@ -1,4 +1,4 @@
-.reserve {
+.reserve__form-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,21 +12,27 @@
   flex-direction: column;
   backdrop-filter: blur(1.5px);
 }
-.reserve__close {
+.reserve__form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2em 2em 3em;
+  border-radius: 0.8em;
+  position: relative;
+}
+.reserve__form__close {
   transform: scale(0);
 }
-.reserve__form {
+.reserve__form__form {
   background-color: white;
   padding: 2.3em 2em 3em;
   border-radius: 0.8em;
   position: relative;
 }
-.reserve__title {
+.reserve__form__title {
   text-align: center;
   margin-bottom: 1em;
   color: rgb(250, 64, 64);
 }
-.reserve__x {
+.reserve__form__x {
   position: absolute;
   font-size: 1.1rem;
   top: 0.6em;
@@ -34,23 +40,23 @@
   cursor: pointer;
   padding: 0.5em;
 }
-.reserve__x:hover {
+.reserve__form__x:hover {
   color: rgb(250, 64, 64);
 }
-.reserve__label {
+.reserve__form__label {
   display: grid;
   gap: 0.5em;
 }
-.reserve__label__rating {
+.reserve__form__label__rating {
   display: flex;
   gap: 1em;
   margin-bottom: 1em;
 }
-.reserve__rating {
+.reserve__form__rating {
   padding: 0.3em 0.5em;
   border: 1px solid #ccc;
 }
-.reserve__comment__value {
+.reserve__form__comment__value {
   resize: none;
   width: 100%;
   height: 100px;
@@ -62,7 +68,7 @@
   outline: none;
   margin-bottom: 1.5em;
 }
-.reserve__btn {
+.reserve__form__btn {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -73,6 +79,6 @@
   color: white;
   font-weight: 500;
 }
-.reserve__btn:hover {
+.reserve__form__btn:hover {
   background-color: rgb(250, 64, 64);
 }
