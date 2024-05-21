@@ -10,8 +10,11 @@ import { setUserSlice } from './store/slices/userLogged.slice'
 import { useDispatch, useSelector } from 'react-redux'
 import ReservationPage from './pages/ReservationPage'
 import ProtectedRoutes from './pages/ProtectedRoutes'
+import Notification from './components/shared/Notification'
 
 function App() {
+
+  const notifications = useSelector(states => states.notifications)
 
   const dispatch = useDispatch()
 
@@ -23,6 +26,7 @@ function App() {
 
   return (
     <div className='app'>
+      <Notification {...notifications} />
       <HeaderShared />
       <Routes>
         <Route path='/' element={<HomePage />} />
