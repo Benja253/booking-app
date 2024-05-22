@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ReservationPage from './pages/ReservationPage'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 import Notification from './components/shared/Notification'
+import FooterShared from './components/shared/FooterShared'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/reservation' element={<ReservationPage />} />
         </Route>
       </Routes>
+      <FooterShared />
     </div>
   )
 }

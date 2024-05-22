@@ -11,3 +11,9 @@
   display: grid;
   gap: 2em;
 }
+.reservations__link {
+  color: blue;
+  &:hover {
+    text-decoration: underline;
+  }
+}

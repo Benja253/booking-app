@@ -15,7 +15,7 @@ const FormReviews = ({ reserveSelected, setReserveSelected }) => {
       hotelId: +reserveSelected?.hotelId || 1,
       rating: +data.rating
     }
-    createReviews('/reviews', obj)
+    createReviews('/reviews', obj, 'Review Created! ✅')
     setReserveSelected()
   }
 

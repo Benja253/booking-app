@@ -3,6 +3,7 @@ import useCrud from "../hooks/useCrud"
 import ReserveCard from "../components/ReservationPage/ReserveCard"
 import './styles/ReservationPage.css'
 import FormReviews from "../components/ReservationPage/FormReviews"
+import { Link } from "react-router-dom"
 
 const ReservationPage = () => {
 
@@ -21,18 +22,24 @@ const ReservationPage = () => {
         reserveSelected={reserveSelected}
         setReserveSelected={setReserveSelected}
       />
-      <div className="reservations__container">
-        {
-          reservation.map(reserve => (
-            <ReserveCard
-              key={reserve.id}
-              reserve={reserve}
-              deleteReservation = {deleteReservation}
-              setReserveSelected={setReserveSelected}
-            />
-          ))
-        }
-      </div>
+      {
+        reservation.length
+          ? (
+            <div className="reservations__container">
+              {
+                reservation.map(reserve => (
+                  <ReserveCard
+                    key={reserve.id}
+                    reserve={reserve}
+                    deleteReservation = {deleteReservation}
+                    setReserveSelected={setReserveSelected}
+                  />
+                ))
+              }
+            </div>
+          )
+          : <p>😞 No hay reservaciones activas. Para escoger un hotel y reservar <Link className="reservations__link" to='/'>ir a Home</Link></p>
+      }
     </div>
   )
 }

@@ -6,7 +6,7 @@ const ReserveCard = ({ reserve, deleteReservation, setReserveSelected }) => {
   const reservationsDays = getDaysFromDates(reserve.checkIn, reserve.checkOut)
 
   const handleDelete = () => {
-    deleteReservation('/bookings', reserve.id, 'Reserve Selected! ❌')
+    deleteReservation('/bookings', reserve.id, 'Reserve Deleted! ❌')
   }
 
   const handleSelectReserve = () => {

@@ -68,6 +68,14 @@ const useCrud = () => {
       .then(res => {
         console.log(res.data)
         setInfoApi(infoApi.map(e => e.id === id ? res.data : e))
+        dispatch(showNotifications({
+          message,
+          isShow: true,
+          isBgColorGreen: true
+        }))
+        setTimeout(() => {
+          dispatch(closeNotifications())
+        }, 3000);
       })
       .catch(err => {
         console.log(err)
