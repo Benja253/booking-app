@@ -8,7 +8,7 @@ const FormUser = () => {
   const { loginUser } = useAuth()
 
   const submit = data => {
-    loginUser(data)
+    loginUser(data, 'User Logged! ✅')
   }
 
   return (

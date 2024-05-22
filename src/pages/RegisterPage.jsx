@@ -8,7 +8,7 @@ const RegisterPage = () => {
   const { registerUser } = useAuth()
 
   const submit = data => {
-    registerUser(data)
+    registerUser(data, 'User Created! ✅')
     reset({
       firstName: '',
       lastName: '',

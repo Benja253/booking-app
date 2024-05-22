@@ -2,7 +2,7 @@
 const Notification = ({message, isShow, isBgColorGreen}) => {
 
   const objStyles = {
-    backgroundColor: isBgColorGreen ? 'rgb(19, 138, 15)' : 'rgb(250, 64, 64)'
+    backgroundColor: isBgColorGreen ? 'rgba(19, 138, 15, 0.5)' : 'rgba(250, 64, 64, 0.5)'
   }
   
   return (

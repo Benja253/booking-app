@@ -10,7 +10,7 @@ const FormReservation = ({ hotel }) => {
 
   const submit = data => {
     data.hotelId = hotel.id
-    createBooking('/bookings', data)
+    createBooking('/bookings', data, 'Reservations Created! 😄')
     reset({
       checkIn: '',
       checkOut: ''
